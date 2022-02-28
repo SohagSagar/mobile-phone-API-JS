@@ -45,7 +45,7 @@
 /* result-counter */
 .result-counter{
     font-family: 'Ubuntu Mono', monospace;
-    font-size: 1.5em;
+    font-size: 1.1em;
     
     color: var(--main-color);
 }
@@ -101,16 +101,15 @@
 .details-heading{
     color: var(--main-color);
     font-size: 1.5em;
-    /* border-bottom: 1px solid grey; */
     font-family: 'Ubuntu Mono', monospace;
-
 }
 
 .modal-info{
     display: flex;
 }
 .phone-image img{
-    width: 350px;
+    width: 250px;
+    margin-right: 20px;
     
 }
 .table-details{
@@ -121,8 +120,17 @@
 .table-details th,td{
     color: var(--main-color);
 }
+.table-details td{
+    max-width: 400px;
+    overflow-wrap: break-word;
+}
 
 #modalBtn{
     margin: auto;
     padding: 3px 20px;
+}
+
+/* spinner style */
+#spinner{
+    display: none;
 }
