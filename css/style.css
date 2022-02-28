@@ -1,0 +1,52 @@
+.search{
+    display: flex;
+    margin-top: 50px;
+    justify-content: center;
+    align-items: center;
+}
+.input-field input{
+    border-radius: 5px;
+    width: 30em;
+    height: 2.5em;
+    outline: none;
+    padding-left: 10px;
+    margin-right: 10px;
+    
+}
+.input-field input:focus{
+    color: rgb(43, 104, 43);
+    transition: 0.4s;
+    border: 1px solid rgb(43, 104, 43);
+}
+.search-btm button{
+     width: 7em;
+}
+.text-center{
+    color: rgb(43, 104, 43);
+}
+.card-body{
+    border: 1px solid rgb(43, 104, 43);
+    height: 310px;
+    width: 250px;
+    margin-top: 80px;
+    border-radius: 10px;
+}
+.card-body img{
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+.card-body p{
+    line-height: 0.4;
+    color: rgb(43, 104, 43);
+}
+.card-body button{
+    padding: 2px 10px;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
