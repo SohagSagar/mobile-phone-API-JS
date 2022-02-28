@@ -49,9 +49,6 @@
     
     color: var(--main-color);
 }
-/* #resultCounter{
-    display: none;
-} */
 
 /* card styling */
 .card-info{
@@ -96,4 +93,36 @@
     display: flex;
     justify-content: center;
     margin: auto;
+}
+
+
+/* phone details styling */
+/* modal styling */
+.details-heading{
+    color: var(--main-color);
+    font-size: 1.5em;
+    /* border-bottom: 1px solid grey; */
+    font-family: 'Ubuntu Mono', monospace;
+
+}
+
+.modal-info{
+    display: flex;
+}
+.phone-image img{
+    width: 350px;
+    
+}
+.table-details{
+    line-height: 1.2;
+    font-family: 'Hubballi', cursive;
+    font-size: 1.1em;
+}
+.table-details th,td{
+    color: var(--main-color);
+}
+
+#modalBtn{
+    margin: auto;
+    padding: 3px 20px;
 }

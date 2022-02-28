@@ -1,7 +1,7 @@
 const searchBtn=()=>{
 
     const inputValue= document.getElementById('inputValue').value;
-    console.log(inputValue.value);
+    document.getElementById('inputValue').value="";
 
     fetch(`https://openapi.programming-hero.com/api/phones?search=${inputValue}`)
     .then(res => res.json())
