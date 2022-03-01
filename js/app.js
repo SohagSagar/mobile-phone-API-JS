@@ -35,7 +35,7 @@ const loadData=phoneData=>{
         const phoneId=(phone.slug);
         const brandName=phone.brand;
         const phonePhoto=(phone.image);
-        const phoneModel=(phone.phone_name).slice(0,19);
+        const phoneModel=(phone.phone_name.slice(0,19));
 
         const div=document.createElement('div');
         div.classList.add('card-body');
@@ -94,6 +94,7 @@ const displayDetails=details=>{
     const phoneimage=(phoneDetails.image);
     const brand=(phoneDetails.brand);
     const name=(phoneDetails.name);
+    console.log(name);
     const display=(phoneDetails.mainFeatures.displaySize);
     const ramRom=(phoneDetails.mainFeatures.memory);
     const chipset=(phoneDetails.mainFeatures.chipSet);
@@ -135,7 +136,7 @@ const displayDetails=details=>{
                         </tr>
                         <tr>
                             <th>Model</th>
-                            <td>${name} 5s</td>
+                            <td>${name}</td>
                         </tr>
                         <tr>
                             <th>Display</th>
