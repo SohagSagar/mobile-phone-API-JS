@@ -89,7 +89,6 @@ const moreDetails=detailsId=>{
 }
 
 const displayDetails=details=>{
-    console.log(details);
     const phoneDetails=details.data;
 
     const phoneimage=(phoneDetails.image);
@@ -107,10 +106,9 @@ const displayDetails=details=>{
     const radio=(phoneDetails.others.Radio);
     const usb=(phoneDetails.others.USB);
     let releaseDate=(phoneDetails.releaseDate);
-    console.log(releaseDate);
-    // const releaseDateError='No date Found';
-    if(releaseDate==undefined || releaseDate==" "){
-        releaseDate='No date Found';
+
+    if(releaseDate==undefined || releaseDate==""){
+        releaseDate='Date not found !!';
     }
     else{
         let releaseDate=(phoneDetails.releaseDat);
