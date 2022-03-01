@@ -203,3 +203,49 @@
     }
 }
 
+/* tablet responsiveness */
+@media (min-width:688px) AND (max-width:992px){
+    .input-field input{
+        width: 26em;
+        height: 2.5em;   
+    }
+    .search-btm button{
+        width: 5em;
+        padding: 6px 10px;
+   }
+   .card-info{
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    }
+    .modal-info{
+        display: flex;
+        flex-direction: column;
+    }
+    .phone-image img{
+        width: 200px;
+        display: flex;
+        margin: auto;
+        margin-bottom: 20px;
+    }
+    .table-details td{
+        max-width: 200px;
+        overflow-wrap: break-word;
+    }
+
+    .top-heading{
+        font-size: 2em;
+    }
+    .search{
+        margin-top: 25px;
+    }
+    .logo{
+        margin-top: 25px;
+    }
+    .logo img{
+        width: 90px;
+    }
+}
