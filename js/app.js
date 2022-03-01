@@ -95,7 +95,6 @@ const displayDetails=details=>{
     const phoneimage=(phoneDetails.image);
     const brand=(phoneDetails.brand);
     const name=(phoneDetails.name);
-    console.log(name);
     const display=(phoneDetails.mainFeatures.displaySize);
     const ramRom=(phoneDetails.mainFeatures.memory);
     const chipset=(phoneDetails.mainFeatures.chipSet);
@@ -108,8 +107,9 @@ const displayDetails=details=>{
     const radio=(phoneDetails.others.Radio);
     const usb=(phoneDetails.others.USB);
     let releaseDate=(phoneDetails.releaseDate);
-    const releaseDateError='No date Found';
-    if(releaseDate==undefined){
+    console.log(releaseDate);
+    // const releaseDateError='No date Found';
+    if(releaseDate==undefined || releaseDate==" "){
         releaseDate='No date Found';
     }
     else{
