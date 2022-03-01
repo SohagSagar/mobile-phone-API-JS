@@ -1,24 +1,38 @@
 
 const searchBtn=()=>{
-
     const inputValue= document.getElementById('inputValue').value.toLowerCase();
     document.getElementById('inputValue').value="";
-
     fetch(`https://openapi.programming-hero.com/api/phones?search=${inputValue}`)
     .then(res => res.json())
     .then(data=>getData(data.data));   
-     
     document.getElementById('spinner').style.display='block';
-
 }
 
+
+
+
 const getData= phoneData=>{
+    let responseCounter=0;
+    for(const phoneCounter of phoneData ){
+        responseCounter++;
+    }
+
+    loadData(phoneData.slice(0,20));
+    document.getElementById('showMore').addEventListener('click',()=>{
+        loadData(phoneData.slice(0,responseCounter));
+    })
+    
+}
+
+const loadData=phoneData=>{
+    
     const cardBody= document.getElementById('card');
     cardBody.innerHTML="";
-    let loopCounter=0;
+    document.getElementById('showMore').style.display='none';
+    let productCounter=0;
     
     for(const phone of phoneData){
-        loopCounter++;
+        productCounter++;
 
         const phoneId=(phone.slug);
         const brandName=phone.brand;
@@ -52,14 +66,20 @@ const getData= phoneData=>{
   
     }
 
+    if(productCounter>=20){
+        document.getElementById('showMore').style.display='block';
+    }
+    if(productCounter>20){
+        document.getElementById('showMore').style.display='none';
+    }
+
     document.getElementById('spinner').style.display='none';
     document.getElementById('resultCounter').style.display='block'
-    if(loopCounter==0){
+    if(productCounter==0){
         document.getElementById('resultCounter').innerText=`No Result(s) found`;
     }else{
-        document.getElementById('resultCounter').innerText=`${loopCounter} Result(s) found`;
+        document.getElementById('resultCounter').innerText=`${productCounter} Result(s) found`;
     }
-    
 }
 
 

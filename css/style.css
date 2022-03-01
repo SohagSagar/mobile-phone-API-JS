@@ -94,6 +94,15 @@
     justify-content: center;
     margin: auto;
 }
+#showMore{
+    padding: 2px 20px;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    display: none;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
 
 
 /* phone details styling */
