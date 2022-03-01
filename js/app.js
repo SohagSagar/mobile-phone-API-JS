@@ -1,4 +1,4 @@
-
+// load searched api
 const searchBtn=()=>{
     const inputValue= document.getElementById('inputValue').value.toLowerCase();
     document.getElementById('inputValue').value="";
@@ -8,9 +8,7 @@ const searchBtn=()=>{
     document.getElementById('spinner').style.display='block';
 }
 
-
-
-
+// get api data
 const getData= phoneData=>{
     let responseCounter=0;
     for(const phoneCounter of phoneData ){
@@ -20,17 +18,17 @@ const getData= phoneData=>{
     loadData(phoneData.slice(0,20));
     document.getElementById('showMore').addEventListener('click',()=>{
         loadData(phoneData.slice(0,responseCounter));
-    })
-    
+    })  
 }
 
+// display api data
 const loadData=phoneData=>{
-    
     const cardBody= document.getElementById('card');
     cardBody.innerHTML="";
     document.getElementById('showMore').style.display='none';
     let productCounter=0;
-    
+
+
     for(const phone of phoneData){
         productCounter++;
 
@@ -39,7 +37,6 @@ const loadData=phoneData=>{
         const phonePhoto=(phone.image);
         const phoneModel=(phone.phone_name).slice(0,19);
 
-        
         const div=document.createElement('div');
         div.classList.add('card-body');
         div.innerHTML=`
@@ -78,11 +75,11 @@ const loadData=phoneData=>{
     if(productCounter==0){
         document.getElementById('resultCounter').innerText=`No Result(s) found`;
     }else{
-        document.getElementById('resultCounter').innerText=`${productCounter} Result(s) found`;
+        document.getElementById('resultCounter').innerText=`${productCounter}+ Result(s) found.`;
     }
 }
 
-
+// display phone details
 const moreDetails=detailsId=>{
     const phoneId= detailsId;
     const url=`https://openapi.programming-hero.com/api/phone/${phoneId}`
@@ -94,7 +91,6 @@ const moreDetails=detailsId=>{
 const displayDetails=details=>{
     console.log(details);
     const phoneDetails=details.data;
-
 
     const phoneimage=(phoneDetails.image);
     const brand=(phoneDetails.brand);
@@ -120,7 +116,6 @@ const displayDetails=details=>{
         let releaseDate=(phoneDetails.releaseDat);
     }
     
-
     const modalContent=document.getElementById('modalContent');
     modalContent.innerHTML="";
     const div=document.createElement('div');
@@ -200,6 +195,5 @@ const displayDetails=details=>{
     
     `
     modalContent.appendChild(div);
-
 
 }

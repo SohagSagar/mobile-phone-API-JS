@@ -9,11 +9,19 @@
     font-size: 2em;
     font-family: 'Hubballi', cursive;
     font-weight: 900;
-    margin-top: 20px;
-    
 }
 .heading-right-text{
     color:grey;
+}
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    color: var(--main-color);
+}
+.logo img{
+    width: 100px;
 }
 /* search box */
 .search-icon{
@@ -21,7 +29,7 @@
 }
 .search{
     display: flex;
-    margin-top: 50px;
+    margin-top: 40px;
     justify-content: center;
     align-items: center;
 }
@@ -53,10 +61,11 @@
 /* card styling */
 .card-info{
     display: grid;
-    grid-template-columns: repeat(3,1fr);
     grid-gap:1em;
-    justify-content: center;
     align-items: center;
+    margin-bottom: 40px;
+    justify-content: center;
+    grid-template-columns: repeat(3,1fr);
     
 }
 .card-body{
@@ -94,6 +103,7 @@
     justify-content: center;
     margin: auto;
 }
+/* load data btn */
 #showMore{
     padding: 2px 20px;
     display: flex;
@@ -105,7 +115,9 @@
 }
 
 
-/* phone details styling */
+/* phone details styling start*/
+
+
 /* modal styling */
 .details-heading{
     color: var(--main-color);
@@ -143,3 +155,51 @@
 #spinner{
     display: none;
 }
+
+/* Media queries styling */
+
+@media (max-width:688px){
+
+    .input-field input{
+        width: 12em;
+        height: 2em;   
+    }
+    .search-btm button{
+        width: 5em;
+        padding: 3px 5px;
+   }
+   .card-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    }
+    .modal-info{
+        display: flex;
+        flex-direction: column;
+    }
+    .phone-image img{
+        width: 150px;
+        display: flex;
+        margin: auto;
+        margin-bottom: 20px;
+    }
+    .table-details td{
+        max-width: 200px;
+        overflow-wrap: break-word;
+    }
+
+    .top-heading{
+        font-size: 1.3em;
+    }
+    .search{
+        margin-top: 25px;
+    }
+    .logo{
+        margin-top: 25px;
+    }
+    .logo img{
+        width: 70px;
+    }
+}
+
