@@ -97,7 +97,13 @@ const displayDetails=details=>{
     console.log(name);
     const display=(phoneDetails.mainFeatures.displaySize);
     const ramRom=(phoneDetails.mainFeatures.memory);
-    const chipset=(phoneDetails.mainFeatures.chipSet);
+    let chipset=(phoneDetails.mainFeatures.chipSet);
+     if(chipset==undefined || chipset==""){
+         chipset="Data not Found !!"
+     }
+     else{
+         chipset=(phoneDetails.mainFeatures.chipSet);
+     }
     const sensorsArray=(phoneDetails.mainFeatures.sensors);
     const sensors=([...sensorsArray].join(","));
     const wan= (phoneDetails.others.WLAN);
@@ -109,7 +115,7 @@ const displayDetails=details=>{
     let releaseDate=(phoneDetails.releaseDate);
 
     if(releaseDate==undefined || releaseDate==""){
-        releaseDate='Date not found !!';
+        releaseDate='Date not Found !!';
     }
     else{
         let releaseDate=(phoneDetails.releaseDat);
